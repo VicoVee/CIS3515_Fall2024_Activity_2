@@ -1,7 +1,9 @@
 package edu.temple.inclassuiacvitivity
 
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 class MainActivity : AppCompatActivity() {
@@ -13,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
         /* TODO Step 2: Populate this array with multiples of 5 from 5 - 100*/
-        //val numberArray = Array Of Numbers
+        val numberArray = arrayListOf<Int>()
+        numberArray.add(5)
+        Log.d("TAG", "$numberArray")
 
         /* TODO Step 3: Create adapter to display items from array in Spinner */
         //spinner.adapter = ArrayAdapter...
