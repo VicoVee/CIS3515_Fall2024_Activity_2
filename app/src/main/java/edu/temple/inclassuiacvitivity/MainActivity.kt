@@ -26,23 +26,25 @@ class MainActivity : AppCompatActivity() {
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
 
 
-//        // TODO Step 4: Change TextView's text size to the number selected in the Spinner */
-//        spinner.onItemSelectedListener = object: OnItemSelectedListener,
-//            AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-//                p0?.run{
-//                    //Get the color from the spinner by calling the Adapter
-//                    //and getting the selected index
-//                    val number = getItemAtPosition(p2).toString()
-//                }
-//            }
-//
-//            override fun onNothingSelected(p0: AdapterView<*>?) {}
-//            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-//                TODO("Not yet implemented")
-//            }
-//
-//        }
+        // TODO Step 4: Change TextView's text size to the number selected in the Spinner */
+        spinner.onItemSelectedListener = object: OnItemSelectedListener,
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                p0?.run{
+                    //Get the color from the spinner by calling the Adapter
+                    //and getting the selected index
+                    val numSize = getItemAtPosition(p2).toString()
+
+                    displayTextView.textSize = numSize.toFloat()
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+            override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                TODO("Not yet implemented")
+            }
+
+        }
 
     }
 }
